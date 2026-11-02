@@ -1,0 +1,26 @@
+Magnus / mold-risk chain
+  PASS  es(0 C) = 6.112 hPa
+  PASS  es(20 C) ~ 23.4 hPa
+  PASS  dew point 28 C / 75% ~ 23.2 C
+  PASS  surface RH, 24 C wall ~ 95%
+  PASS  surface RH = room RH when wall = air
+  PASS  wall below dew point -> >100% (condensation)
+Adaptive baseline
+  PASS  warm-up learns mean
+  PASS  normal reading -> |z| < 3
+  PASS  spike -> z > 3
+  PASS  frozen baseline does not move during alert
+  PASS  unfrozen baseline adapts
+Classification priority
+  PASS  clean room -> OK
+  PASS  cold humid wall -> MOLD
+  PASS  hot surface -> HOT SPOT
+  PASS  gas overrides mold
+  PASS  MQ2 1.67x baseline -> GAS
+  PASS  MQ135 z=4 -> BAD AIR
+Validation
+  PASS  RH 120% rejected
+  PASS  normal reading accepted
+  PASS  NaN rejected
+
+20 passed, 0 failed

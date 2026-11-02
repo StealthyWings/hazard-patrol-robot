@@ -1,0 +1,11 @@
+category,method,TP,FP,FN,precision,recall,f1
+BAD AIR,Global fixed,11,11,2,0.5,0.846,0.629
+BAD AIR,Per-zone adaptive,11,0,2,1.0,0.846,0.917
+MOLD RISK,Global fixed,50,13,11,0.794,0.82,0.806
+MOLD RISK,Per-zone adaptive,50,13,11,0.794,0.82,0.806
+HOT SPOT,Global fixed,15,0,0,1.0,1.0,1.0
+HOT SPOT,Per-zone adaptive,15,0,0,1.0,1.0,1.0
+GAS/SMOKE,Global fixed,11,0,0,1.0,1.0,1.0
+GAS/SMOKE,Per-zone adaptive,11,0,0,1.0,1.0,1.0
+ANY HAZARD,Global fixed,92,19,8,0.829,0.92,0.872
+ANY HAZARD,Per-zone adaptive,89,11,11,0.89,0.89,0.89

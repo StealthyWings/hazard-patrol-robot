@@ -1,0 +1,27 @@
+PATROL ROBOT - DETECTION SIMULATION (synthetic data, seed 42)
+Records: 630  (5 zones x 21 days x 6 patrols); evaluated: 570 (days 3-21)
+Injected / physical hazard visits in evaluation set: 100
+
+Overall (any hazard vs OK):
+  Global fixed : precision 0.829  recall 0.920  F1 0.872  false-alarm rate 4.0 %  accuracy 94.4 %
+  Per-zone EWMA: precision 0.890  recall 0.890  F1 0.890  false-alarm rate 2.3 %  accuracy 95.8 %
+
+Per category:
+  category            method  TP  FP  FN  precision  recall    f1
+   BAD AIR      Global fixed  11  11   2      0.500   0.846 0.629
+   BAD AIR Per-zone adaptive  11   0   2      1.000   0.846 0.917
+ MOLD RISK      Global fixed  50  13  11      0.794   0.820 0.806
+ MOLD RISK Per-zone adaptive  50  13  11      0.794   0.820 0.806
+  HOT SPOT      Global fixed  15   0   0      1.000   1.000 1.000
+  HOT SPOT Per-zone adaptive  15   0   0      1.000   1.000 1.000
+ GAS/SMOKE      Global fixed  11   0   0      1.000   1.000 1.000
+ GAS/SMOKE Per-zone adaptive  11   0   0      1.000   1.000 1.000
+ANY HAZARD      Global fixed  92  19   8      0.829   0.920 0.872
+ANY HAZARD Per-zone adaptive  89  11  11      0.890   0.890 0.890
+
+Wall-surface RH measurement error vs ground truth (evaluation set):
+  MAE 1.30 %RH   RMSE 1.65 %RH   bias +0.12 %RH
+Monte-Carlo propagation at 28 C / 75 % / wall 24 C: 95.0 % +- 4.2 % (1 sigma), P(below 80 %) = 0.01 %
+
+Highly correlated feature pairs (|r| > 0.9):
+  t_surface ~ dT_surface: r = 0.90
