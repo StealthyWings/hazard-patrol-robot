@@ -1,0 +1,6 @@
+firmware/patrol_robot/secrets.h
+*.bin
+*.elf
+build/
+__pycache__/
+.DS_Store
